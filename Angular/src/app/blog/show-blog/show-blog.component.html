@@ -1,0 +1,28 @@
+<div class="back ">
+    <div *ngIf="isLoading" style="text-align: center;">
+        <app-loader></app-loader>
+      </div>
+
+    <div class="container d-flex  justify-content-end">
+        <button class=" mt-4 raise animate__animated animate__fadeIn" (click)="addClick()" routerLinkActive="router-link-active" >Add blog</button>
+
+    </div>
+    
+    
+   
+        <div *ngFor="let dataItem of blogPost" class="card container mt-4 animate__animated animate__fadeInDown" style="width: 100%;">
+
+            <p class=""><strong>User:  {{dataItem.user.username}}</strong></p>
+
+            <h3 class="color">{{dataItem.topic}}</h3>
+            
+            <div class="card-body">
+                <p class="color">{{dataItem.text}}</p>
+            </div>
+            <hr class="line">
+            <p class="comment color">{{dataItem.comment}}</p>
+          </div>
+   
+    
+</div>
+

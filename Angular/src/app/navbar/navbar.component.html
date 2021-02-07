@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg  ">
+    <a class="navbar-brand">Blog Website</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link " routerLink="/" *ngIf="isLoggedIn">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/auth"*ngIf="!isLoggedIn" >Authenticate</a>
+        </li>
+        <li>
+            <a class="nav-link" *ngIf="isLoggedIn" (click)="logout()" >Logout</a>
+
+        </li>
+        <li>
+            <a class="nav-link" routerLink="/blog"*ngIf="isLoggedIn" >Blog</a>
+        </li>
+      
+        
+      
+      </ul>
+      
+
+    </div>
+  </nav>
+  

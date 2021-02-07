@@ -1,0 +1,65 @@
+<h1 class="container animate__animated animate__fadeInDown">Please add your post</h1>
+
+    <div class="back card container animate__animated animate__fadeInUpBig ">
+
+
+        <form #addForm="ngForm" (ngSubmit)="addBlog()">
+            <div class="container mt-4 mb-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Topic</span>
+                    </div>
+                    
+                    <input type="text" class="form-control"
+                     placeholder="Topic" aria-label="Topic"
+                      aria-describedby="basic-addon1"
+                      name="topic"
+                      [(ngModel)]="val.topic">
+                  </div>
+                
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">Text</span>
+                    </div>
+                    <textarea class="form-control" aria-label="With textarea"
+                    name="text"
+                    [(ngModel)]="val.text"></textarea>
+                </div>
+            
+                <div class="input-group mb-3 mt-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1" >Comment</span>
+                    </div>
+                    <input type="text" class="form-control"
+                       placeholder="Comment" aria-label="Comment"
+                        aria-describedby="basic-addon1"
+                        name="comment"
+                        [(ngModel)]="val.comment">
+                </div>
+            
+                <div hidden class="input-group mb-3 mt-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1" >UserId</span>
+                    </div>
+                    <input  type="number" class="form-control"
+                        #myInput
+                       placeholder="Comment" aria-label="Comment"
+                        aria-describedby="basic-addon1"
+                        id="userId"
+                        name="userId"
+                        [(ngModel)]="val.userId"
+                        
+                        
+                        >
+                </div>  
+        
+                <button type="submit" class="raise ">Add</button>  
+                <button type="button" routerLink="/blog" class="sub raise">Go Back</button>          
+            </div>
+        </form>
+        
+    </div>
+     
+
+
+
